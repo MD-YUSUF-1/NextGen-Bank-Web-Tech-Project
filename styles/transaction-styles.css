@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+
+    body {
+        font-family: "Open Sans", 'Segoe UI', sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        background: linear-gradient(135deg, #f0f4ff 0%, #e6f0ff 100%);
+        padding-top: 70px;
+    }
+
+    .container {
+        max-width: 1200px;
+        padding: 20px;
+        margin: 0 auto;
+    }
+
+
+    .banner {
+        background: linear-gradient(to right, #224296 0%, #3675e2 100%);
+        color: white;
+        padding: 30px;
+        border-radius: 16px;
+        box-shadow: 0 10px 30px #193d7c63;
+        margin-bottom: 30px;
+        text-align: center;
+
+    }
+
+    .banner h1 {
+        font-size: 2rem;
+        font-weight: 600;
+        margin: 20px 0;
+    }
+
+    .banner p {
+        font-size: 1.1rem;
+
+    }
