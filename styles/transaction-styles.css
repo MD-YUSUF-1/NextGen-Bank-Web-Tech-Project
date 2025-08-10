@@ -1,12 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
-
     body {
         font-family: "Open Sans", 'Segoe UI', sans-serif;
         font-optical-sizing: auto;
         font-weight: 400;
         font-style: normal;
-        background: linear-gradient(135deg, #f0f4ff 0%, #e6f0ff 100%);
+        background: linear-gradient(to right, #f0f4ff 0%, #e6f0ff 100%);
         padding-top: 70px;
     }
 
@@ -15,6 +14,7 @@
         padding: 20px;
         margin: 0 auto;
     }
+
 
 
     .banner {
@@ -37,4 +37,44 @@
     .banner p {
         font-size: 1.1rem;
 
+    }
+
+    .filter-section {
+        background: white;
+        padding: 25px;
+        border-radius: 16px;
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+        margin-bottom: 25px;
+    }
+
+    .filters-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 20px;
+        margin-bottom: 20px;
+    }
+
+    .filter-fields {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .filter-fields label {
+        font-weight: 600;
+        color: #46556d;
+        font-size: 1rem;
+    }
+
+    .filter-input {
+        padding: 10px 8px;
+        font-size: 1rem;
+        border-radius: 8px;
+        border: 2px solid #e2e4e9;
+    }
+
+    .filter-input:focus {
+        outline: none;
+        border-color: #6383d3;
+        box-shadow: 0 0 1px 3px #3c80ee1a;
     }

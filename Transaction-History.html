@@ -15,9 +15,9 @@
     <header>
 
     </header>
-    <main>
+    <main class="container">
         <section>
-            <div class="container">
+            <div>
                 <div class="banner">
                     <h1> Transaction History</h1>
                     <p>View and manage your account transactions details</p>
@@ -25,8 +25,36 @@
             </div>
         </section>
         <section>
-            
-
+            <div class="filter-section">
+                <form id="filter-form">
+                    <div class="filters-container">
+                        <div class="filter-fields">
+                            <label for="from-date">From date</label>
+                            <input type="date" id="from-date" class="filter-input">
+                        </div>
+                        <div class="filter-fields">
+                            <label for="to-date">To date</label>
+                            <input type="date" id="to-date" class="filter-input">
+                        </div>
+                        <div class="filter-fields">
+                            <label for="transaction-type">Transaction Type</label>
+                            <select id="transaction-type" class="filter-input">
+                                <option value="">All Types</option>
+                                <option value="debit">Debit</option>
+                                <option value="credit">Credit</option>
+                                <option value="transfer">Transfer</option>
+                            </select>
+                        </div>
+                        <div class="filter-fields">
+                            <label for="amount-range">Amount Range</label>
+                            <select id="amount-range" class="filter-input">
+                                <option value="">All Amounts</option>
+                                <option value="0-100">$0 - $100</option>
+                                <option value="100-500">$100 - $500</option>
+                                <option value="500-1000">$500 - $1,000</option>
+                                <option value="1000+">$1,000+</option>
+                        </div>
+                    </div>
         </section>
 
 
