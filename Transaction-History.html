@@ -5,11 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/transaction-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Transaction History</title>
 </head>
 <style>
-   
-
     .filters-container {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -34,6 +35,45 @@
         border-color: #3b82f6;
         box-shadow: 0 0 1px 3px #3c80ee1a;
     }
+
+    .action-buttons {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    .btn {
+        padding: 12px 20px;
+        border: none;
+        border-radius: 10px;
+        font-weight: 600;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 1rem;
+        transform: all 0.3s ease
+    }
+
+    .apply-btn {
+        background: linear-gradient(135deg, #3784ff 0%, #2554a1 100%);
+        color: white;
+    }
+
+    .secondary-btn {
+        background: white;
+        color: #3b82f6;
+        border: 2px solid #3b82f6;;
+    }
+
+    .apply-btn:hover {
+        box-shadow: 0  5px 15px #468dff;
+    }
+
+    .secondary-btn:hover {
+        background: #3b82f6;
+        color: white;
+    }
 </style>
 
 <body>
@@ -41,6 +81,7 @@
 
     </header>
     <main class="container">
+        <!-- Banner section -->
         <section>
             <div>
                 <div class="banner">
@@ -49,6 +90,8 @@
                 </div>
             </div>
         </section>
+
+        <!-- Filter section -->
         <section>
             <div class="filter-section">
                 <form id="filter-form">
@@ -83,16 +126,36 @@
                         <div class="search-bar">
                             <label for="search-input">Search Transactions</label>
                             <div>
-                                <input type="text" id="search-input" class="search-input"
-                                    placeholder="Search here...">
+                                <input type="text" id="search-input" class="search-input" placeholder="Search here...">
                             </div>
                         </div>
                     </div>
-                   
+                    <div class="action-buttons">
+                        <button type="submit" class="btn apply-btn">
+                            <i class="fa-solid fa-filter"></i> Apply Filters
+                        </button>
+                        <button type="reset" class="btn secondary-btn">
+                            <i class="fa-solid fa-rotate-left"></i>Reset
+                        </button>
+                        <button type="button" class="btn secondary-btn">
+                            <i class="fa-solid fa-file-pdf"></i> Export PDF
+                        </button>
+                        <button type="button" class="btn secondary-btn">
+                           <i class="fa-solid fa-file-csv"></i> Export CSV
+                        </button>
+                    </div>
                 </form>
             </div>
         </section>
 
+        <!-- Transactions section -->
+        <section>
+            <table>
+                
+            </table>
+
+
+        </section>
 
     </main>
     <footer>

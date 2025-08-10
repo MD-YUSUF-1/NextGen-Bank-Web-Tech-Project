@@ -5,7 +5,7 @@
         padding: 0;
         box-sizing: border-box;
     }
-    
+
     body {
         font-family: "Open Sans", 'Segoe UI', sans-serif;
         font-optical-sizing: auto;
@@ -24,7 +24,7 @@
 
 
     .banner {
-        background: linear-gradient(to right, #224296 0%, #3675e2 100%);
+        background: linear-gradient(to right, #1F3D8E 0%,  #397DEE 100%);
         color: white;
         padding: 30px;
         border-radius: 16px;
