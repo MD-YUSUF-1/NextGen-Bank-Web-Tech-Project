@@ -8,10 +8,15 @@
     <link rel="stylesheet" href="./styles/landing-page.css">
     <link rel="stylesheet" href="./styles/Font.css">
     <style>
+        /* shared */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
+        }
+        a{
+            text-decoration: none;
+            color: inherit;
         }
 
         .btn {
@@ -24,7 +29,30 @@
             transition: all 0.3s;
         }
 
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: #1e3a8a;
+            margin-bottom: 1rem;
+        }
+
+        .section-title p {
+            font-size: 1.1rem;
+            color: #475569;
+        }
+
+        /* shared finish*/
+
+        /* Hero section start */
         .hero {
             background: url('./img/Rectangle_f.png') no-repeat;
             background-size: cover;
@@ -84,6 +112,54 @@
             color: white;
             transform: translateY(-2px);
         }
+        /* hero section finish */
+        /* services style */
+        .services {
+            padding: 5rem 1.8rem;
+            background: #f8f9fa;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px #3b82f61a;
+            border-top: 8px solid #3b82f6;
+            transition: transform 0.3s;
+            overflow: hidden;
+        }
+
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-icon {
+            width: 60px;
+            height: 60px;
+            background: #3b82f6;
+            border-radius: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+
+        }
+
+        .service-card h3 {
+            color: #1e3a8a;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
     </style>
 </head>
 
@@ -92,13 +168,13 @@
 
     </header>
     <main>
-        <section id="home">
+        <!-- hero section -->
+        <section >
             <div class="hero">
                 <div class="hero-content">
                     <h1>Your Everyday Banking Partner</h1>
                     <p>Your trusted partner for savings, investments, and everyday banking. Manage your money, pay
-                        bills,
-                        transfer funds, and achieve your financial goals with ease.</p>
+                        bills,transfer funds, and achieve your financial goals with ease.</p>
                     <div class="hero-buttons">
                         <a href="" class="btn btn-open-account ">Open Account</a>
                         <a href="#services" class="btn btn-services ">View Services</a>
@@ -106,6 +182,60 @@
                 </div>
             </div>
         </section>
+
+        <!-- services Section -->
+        <section class="services">
+            <div class="container ">
+                <div class="section-title">
+                    <h2>Banking Services for Everyone</h2>
+                    <p>From checking accounts to loans, we have all the banking services you need in one place</p>
+                </div>
+
+                <div class="services-grid">
+                   <a href="">
+                     <div class="service-card">
+                        <div class="service-icon">💰</div>
+                        <h3>Account Management</h3>
+                        <p>View balances, track spending, and view account activity from one convenient dashboard.
+                        </p>
+                    </div>
+                   </a>
+
+                    <div class="service-card">
+                        <div class="service-icon">💸</div>
+                        <h3>Easy Transfers</h3>
+                        <p>Send money to friends , family and business partners instantly.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">💵</div>
+                        <h3>Bill pay</h3>
+                        <p>Easily pay your utility, education, and business bills directly through our bank.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">💳</div>
+                        <h3>Debit & Credit Cards</h3>
+                        <p>Enjoy instant access to your money with our debit cards, and take advantage of credit cards
+                            with competitive rates and rewards.</p>
+                    </div>
+
+                    <div class="service-card">
+                        <div class="service-icon">🏠</div>
+                        <h3>Loans & Mortgages</h3>
+                        <p>Whether you need a loan for a home, car, or personal expenses, we're here to help with
+                            flexible options.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">🪙</div>
+                        <h3>Interest Calculator</h3>
+                        <p>Use our interest calculator to estimate your earnings and track your account growth.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
     </main>
     <footer>
 
