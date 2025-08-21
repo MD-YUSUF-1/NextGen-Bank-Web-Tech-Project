@@ -41,7 +41,7 @@
             color: #475569;
         }
 
-        /* shared finish*/
+        /* shared ends*/
 
         /* Hero section start */
         .hero {
@@ -104,7 +104,7 @@
             transform: translateY(-2px);
         }
 
-        /* hero section finish */
+        /* hero section ends */
 
          /* services style */
         .services {
@@ -156,7 +156,7 @@
             font-weight: 600;
         }
 
-        /* service style finished */
+        /* service style ends */
 
 
         /* why choose us section start */
@@ -194,4 +194,44 @@
         .reason-card p {
             color: #475569;
         }
-        /* why choose us section Finished */
+        /* why choose us section ends */
+
+
+        /* Footer starts here */
+                .footer {
+            background: black;
+            color: white;
+            padding: 4rem 0px 2.4rem;
+            text-align: center;
+        }
+        .footer-content{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+        .footer-content h1{
+            font-size: 1.9rem;
+            font-weight: 700;
+        }
+        .footer-content h3{
+            font-size: 1.2rem;
+        }
+        .social-links{
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            justify-content: center;
+            margin: 8px 4px 0px;
+        }
+        .social-links img{
+            width: 40px;
+            height: 40px;
+        }
+        .footer-content hr{
+            margin: 1rem 0px 1.3rem;
+        }
+        .copyright{
+            font-size: .9rem;
+            color: rgb(199, 199, 199);
+        }
+        /* Footer ends */
