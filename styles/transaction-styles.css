@@ -1,14 +1,30 @@
-
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+a{
+    text-decoration: none;
+}
 
 body {
     background: #f9fcff;
-    padding-top: 70px;
+    padding-top: 30px;
+}
+
+.back-container {
+    margin-left: 6rem;
+}
+
+.back-btn{
+    background: linear-gradient(135deg,  #2554a1 0%,#3784ff 100%);
+    color: white;
+    transition: all .3s;
+}
+
+.back-btn:hover{
+    transform: translateY(-3px);
+    box-shadow: 0px 0px 15px  #468dff;
 }
 
 .container {
@@ -24,7 +40,9 @@ body {
     border-radius: 16px;
     box-shadow: 0 10px 30px #193d7c63;
     margin-bottom: 30px;
+    margin-top: 25px;
     text-align: center;
+
 
 }
 
@@ -123,11 +141,8 @@ body {
     border-radius: 10px;
     font-weight: 600;
     cursor: pointer;
-    display: flex;
-    align-items: center;
     gap: 8px;
     font-size: 1rem;
-    transform: all 0.3s ease
 }
 
 .apply-btn {
