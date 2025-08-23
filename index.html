@@ -8,14 +8,72 @@
     <link rel="stylesheet" href="./styles/landing-page.css">
     <link rel="stylesheet" href="./styles/Font.css">
     <style>
+        .nav {
+            background: linear-gradient(135deg, #081238 0%, #2d3968 100%);
+            color: white;
+            padding: 1.3rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
 
-        
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+
+        .authentication-btn {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        .btn-auth{
+            border: 1px solid white;
+        }
+        .btn-auth:hover{
+            background: rgba(138, 139, 153, 0.5);
+            transform: translateY(-2px);
+            box-shadow: 0px 0px 5px 2px #99a0c5 ;
+        }
+
     </style>
 </head>
 
 <body>
     <header>
+        <nav class="nav">
+            <div class="container nav-container">
+                <div class="logo">NextGen Bank</div>
+                <div class="nav-menu">
+                    <a href="">Home</a>
+                    <a href="#services">Services</a>
+                    <a href="">About</a>
+                    <a href="">About</a>
+                    <a href="">About</a>
+                    <a href="">About</a>
+                    <a href="">About</a>
 
+                </div>
+                <div class="authentication-btn">
+                    <a href="" class="btn btn-auth ">Login</a>
+                    <a href="" class="btn btn-auth">Sign Up</a>
+                </div>
+            </div>
+        </nav>
     </header>
     <main>
         <!-- hero section -->
@@ -34,7 +92,7 @@
         </section>
 
         <!-- services Section -->
-        <section class="services">
+        <section class="services" id="services">
             <div class="container ">
                 <div class="section-title">
                     <h2>Banking Services for Everyone</h2>
@@ -138,12 +196,12 @@
                 <p>Email : ✉ info@nextgenbank.com.bd</p>
                 <h3>Social Links</h3>
                 <div class="social-links">
-                    
+
                     <a href="https://www.facebook.com/"><img src="./img/facebook.png" alt=""></a>
                     <a href="https://www.linkedin.com/"><img src="./img/linkedin.png" alt=""></a>
                     <a href="https://x.com/"><img src="./img/twitter.png" alt=""></a>
                     <a href="https://www.youtube.com/"><img src="./img/youtube.png" alt=""></a>
-                    
+
                 </div>
                 <hr>
                 <p class="copyright">© Copyright 2025 NextGen Bank. All rights reserved.</p>
