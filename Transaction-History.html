@@ -12,6 +12,11 @@
     <title>Transaction History</title>
 </head>
 <style>
+    .error{
+        margin-bottom: 10px;
+        color: red;
+        font-size: .9rem;
+    }
     
 </style>
 
@@ -32,7 +37,7 @@
         <!-- Filter section -->
         <section>
             <div class="filter-section">
-                <form id="filter-form">
+                <form onsubmit="return validateForm()">
                     <div class="filters-container">
                         <div class="filter-fields">
                             <label for="from-date">From date</label>
@@ -62,13 +67,14 @@
                             </select>
                         </div>
                         <div class="search-bar">
-                            <label for="search-input">Search Transactions</label>
+                            <label for="search-input">Search Transactions by Status</label>
                             <div>
                                 <input type="search" id="search-input" class="search-input"
                                     placeholder="Search here...">
                             </div>
                         </div>
                     </div>
+                    <p id="error" class="error" ></p>
                     <div class="action-buttons">
                         <button type="submit" class="btn apply-btn">
                             <i class="fa-solid fa-filter"></i> Apply Filters
@@ -173,6 +179,7 @@
     <footer>
 
     </footer>
+    <script src="./Js/TransitionHistory.js"></script>
 </body>
 
 </html>
