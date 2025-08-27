@@ -8,7 +8,6 @@ a{
 }
 
 body {
-    background: #f9fcff;
     padding-top: 30px;
 }
 
@@ -17,7 +16,7 @@ body {
 }
 
 .back-btn{
-    background: linear-gradient(135deg,  #2554a1 0%,#3784ff 100%);
+    background: #3784ff;
     color: white;
     transition: all .3s;
 }
