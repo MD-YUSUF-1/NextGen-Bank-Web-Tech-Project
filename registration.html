@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Registration Form - Banking System</title>
+<link rel="stylesheet" href="./styles/registration.css">
+</head>
+<body>
+
+<div class="reg-container">
+  <h2>Register</h2>
+  <form id="regForm" novalidate>
+    <label for="fullName">Full Name</label>
+    <input type="text" id="fullName" placeholder="Enter your full name" />
+    <div class="error" id="nameError">Please enter a valid full name (letters and spaces only).</div>
+
+    <label for="email">Email</label>
+    <input type="text" id="email" placeholder="Enter your email" />
+    <div class="error" id="emailError">Please enter a valid email.</div>
+
+    <label for="phone">Phone Number</label>
+    <input type="text" id="phone" placeholder="Enter your phone number" />
+    <div class="error" id="phoneError">Please enter a valid phone number (10-15 digits).</div>
+
+    <label for="nid">NID Number</label>
+    <input type="text" id="nid" placeholder="Enter your NID number" />
+    <div class="error" id="nidError">Please enter a valid NID number (at least 8 digits).</div>
+
+    <label for="address">Address</label>
+    <textarea id="address" placeholder="Enter your address"></textarea>
+    <div class="error" id="addressError">Please enter your address.</div>
+
+    <label for="profilePic">Profile Picture</label>
+    <input type="file" id="profilePic" accept="image/*" />
+    <img id="imagePreview" src="" alt="Profile Preview" style="display:none;" />
+    <div class="error" id="profilePicError">Please upload a valid image file (max 2MB).</div>
+
+    <label for="password">Password</label>
+    <input type="password" id="password" placeholder="Enter your password" />
+    <div class="error" id="passwordError">Password must be at least 6 characters.</div>
+
+    <label for="confirmPassword">Confirm Password</label>
+    <input type="password" id="confirmPassword" placeholder="Confirm your password" />
+    <div class="error" id="confirmPasswordError">Passwords do not match.</div>
+
+    <button type="submit">Register</button>
+    <a href="index.html" class="btn-back">Back</a>
+
+  </form>
+</div>
+
+<script src="./Js/registration.js"></script>
+</body>
+</html>
