@@ -5,7 +5,7 @@ var time = document.getElementById("time");
 var resultSection = document.querySelector(".result");
 
 // assuming your HTML has these divs for errors
-// <div id="errorPrincipal" class="error"></div> etc.
+// <div id="errorPrincipal" class="error"></div> 
 var errorPrincipal = document.getElementById("errorPrincipal");
 var errorRate = document.getElementById("errorRate");
 var errorTime = document.getElementById("errorTime");
