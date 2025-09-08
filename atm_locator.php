@@ -1,12 +1,5 @@
 <?php
-session_start();
 include 'db/db_connect.php';
-
-if(!isset($_SESSION['user_id'])){
-    header("Location: index.html");
-    exit();
-}
-
 
 $sql = "SELECT * FROM atms";
 $result = $conn->query($sql);
