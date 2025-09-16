@@ -109,3 +109,18 @@ function updateUserCardPin($user_id, $user_card_id, $newPin)
         return false; 
     }
 }
+
+function blockUserCard($user_card_id)
+{
+    $con = getConnection();
+    $sql = "UPDATE user_cards SET card_status = 'blocked' WHERE user_card_id = '{$user_card_id}'";
+    $result = mysqli_query($con, $sql);
+    
+    if ($result) {
+        return true;  
+    } else {
+        return false; 
+    }
+}
+
+

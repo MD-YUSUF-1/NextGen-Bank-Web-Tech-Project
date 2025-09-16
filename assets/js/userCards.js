@@ -48,7 +48,7 @@ function loadCards() {
 
                     '<div class="card-body">' +
                     '<div class="card-title">' + card.card_name + '</div>' +
-                    '<div class="card-status status-' + card.card_status + '">' + card.card_status.toUpperCase() + '</div>' +
+                    '<div id="status-btn-' + card.user_card_id + '" class="card-status status-' + card.card_status + '">' + card.card_status.toUpperCase() + '</div>' +
 
                     '<div class="card-details">' +
                     '<div class="detail-row"><span>Card Type:</span><span>' + card.card_type + '</span></div>' +
@@ -60,10 +60,14 @@ function loadCards() {
                     '</div>' +
 
                     '<div class="card-btn-div">' +
-                    '<a href="./CardDetails.php?id=' + card.card_id  + '" class="btn-know">View Details</a>' +
+                    '<a href="./CardDetails.php?id=' + card.card_id + '" class="btn-know">View Details</a>' +
                     '<a href="./cardPinManagement.php?user_card_id=' + card.user_card_id + '&user_id=' + id + '" class="apply-btn">Change PIN</a>' +
-                    '<a href="" class="apply-btn">Block</a>' +
-                    '</div>' +
+                    '<button ' +(card.card_status === "active" ? "" : "disabled") + ' ' +
+                    'onclick="cardBlock(' + card.user_card_id + ')" ' +
+                    'class="apply-btn" ' +
+                    'id="block-btn-' + card.user_card_id + '" ' +
+                    'style="opacity:' + (card.card_status === "active" ? "1" : "0.5") + '">' +(card.card_status === "active" ? "Block" : "Blocked") +'</button>'+
+                '</div>' +
                     '</div>' +
                     '</div>';
 
@@ -72,6 +76,31 @@ function loadCards() {
         }
     }
 }
+
+
+function cardBlock(userCardId) {
+    let btn = document.getElementById('block-btn-' + userCardId);
+    let sbtn = document.getElementById('status-btn-' + userCardId);
+    let xhttp = new XMLHttpRequest();
+    xhttp.open('POST', '../controller/userCardsBlockCheck.php', true);
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhttp.send('user_card_id=' + userCardId);
+    xhttp.onreadystatechange = function () {
+        if (this.readyState == 4 && this.status == 200) {
+            let data = JSON.parse(this.responseText);
+            if (data.success) {
+                btn.innerText = "Blocked";
+                sbtn.innerText = "Blocked";
+                btn.disabled = true;
+                btn.style.opacity = '0.3';
+            } else {
+                alert("Failed to block card");
+            }
+        }
+    }
+}
+
+
 
 loadCards();
 
