@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 420px;
+}
+
+.pin-form {
+    padding: 50px 40px;
+    border-radius: 24px;
+    box-shadow: 0 25px 50px #1e3a8a33;
+}
+
+.form-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.form-header h2 {
+    color: #435ca0;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.form-header p {
+    color: #64748b;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.form-group {
+    margin-bottom: 1.4rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #1e40af;
+    font-size: 1rem;
+}
+
+.pin-input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 16px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #1e40af;
+}
+
+.btn-group {
+    display: flex;
+    gap: 16px;
+    margin-top: 30px;
+}
+
+.btn {
+    flex: 1;
+    padding: 18px 24px;
+    border: none;
+    border-radius: 16px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.btn-cancel {
+    background: #64748b;
+    color: white;
+}
+
+.btn-cancel:hover {
+    background: #334155;
+}
+
+.btn-submit {
+    background: #3b82f6;
+    color: white;
+}
+
+.btn-submit:hover {
+    background: #1d4ed8;
+}

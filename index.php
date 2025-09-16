@@ -1,3 +1,26 @@
+<?php
+
+session_start();
+$_SESSION["username"] = "Yusuf";
+$_SESSION["status"] = true;
+$_SESSION['u_id'] = 1;
+if (!isset($_SESSION["status"])) {
+    header("location: login.html?error=badrequest");
+}
+// unset($_SESSION["status"]);
+// unset($_SESSION["username"]);
+// session_destroy();
+
+// setcookie('status', true, time() + 900, '/');
+// if (!isset($_COOKIE['status'])) {
+//     header('location: login.html?error=badrequest');
+// }
+// setcookie('status', true, time() - 30, '/');
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,50 +28,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NextGen Bank Home </title>
-    <link rel="stylesheet" href="./styles/landing-page.css">
-    <link rel="stylesheet" href="./styles/Font.css">
+    <link rel="stylesheet" href="./assets/styles/landing-page.css">
+    <link rel="stylesheet" href="./assets/styles/Font.css">
     <style>
-        .nav {
-            background: linear-gradient(135deg, #081238 0%, #2d3968 100%);
-            color: white;
-            padding: 1.3rem 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.8rem;
-            font-weight: bold;
-
-        }
-
-        .nav-menu {
-            display: flex;
-            align-items: center;
-            gap: 1.5rem;
-        }
-
-        .authentication-btn {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
-        .btn-auth{
-            border: 1px solid white;
-        }
-        .btn-auth:hover{
-            background: rgba(138, 139, 153, 0.5);
-            transform: translateY(-2px);
-            box-shadow: 0px 0px 5px 2px #99a0c5 ;
-        }
 
     </style>
 </head>
@@ -60,14 +42,26 @@
                 <div class="logo">NextGen Bank</div>
                 <div class="nav-menu">
                     <a href="">Home</a>
-                    <a href="#services">Services</a>
-                    <a href="./Transaction-History.html">Transactions</a>
-                    <a href="./loan_applications.html">Loan application</a>
+                    <a href="./view/Transaction-History.php">Transactions</a>
+                    <a href="./view/Activity-log.php">Activity Log</a>
+                    <a href="./view/Cards.php">Cards</a>
+                     <a href="./loan_applications.html">Loan application</a>
                     <a href="">About</a>
                     <a href="">About</a>
 
                 </div>
-                <div class="authentication-btn">    
+                <div class="authentication-btn">
+                    <!-- php -->
+                    <?php
+                    if (isset($_SESSION['username'])) {
+                        echo "<a href=\"\" class=\" btn username\">" . $_SESSION['username'] . "</a>";
+                        echo "<a href=\"\" class=\"btn btn-auth \">Logout</a>";
+                    } else {
+                        echo "<a href=\"./login.html\" class=\"btn btn-auth \">Login</a>";
+                        echo "<a href=\"./registration.html\" class=\"btn btn-auth \">Sign Up</a>";
+                    }
+                    ?>
+                    <!-- php -->
                 </div>
             </div>
         </nav>
@@ -133,9 +127,9 @@
                     </a>
                     <a href="./atm_locator.php">
                         <div class="service-card">
-                             <div class="service-icon">🏧</div>
-                             <h3>ATM Location</h3>
-                             <p>Find surcharge-free ATMs near you with real-time operating hours and directions.</p>
+                            <div class="service-icon">🏧</div>
+                            <h3>ATM Location</h3>
+                            <p>Find surcharge-free ATMs near you with real-time operating hours and directions.</p>
                         </div>
                     </a>
                     <a href="">
@@ -147,7 +141,7 @@
                         </div>
                     </a>
 
-                    <a href="./Interest_cal.html">
+                   <a href="./Interest_cal.html">
                         <div class="service-card">
                             <div class="service-icon">🪙</div>
                             <h3>Interest Calculator</h3>
@@ -200,10 +194,10 @@
                 <h3>Social Links</h3>
                 <div class="social-links">
 
-                    <a href="https://www.facebook.com/"><img src="./img/facebook.png" alt=""></a>
-                    <a href="https://www.linkedin.com/"><img src="./img/linkedin.png" alt=""></a>
-                    <a href="https://x.com/"><img src="./img/twitter.png" alt=""></a>
-                    <a href="https://www.youtube.com/"><img src="./img/youtube.png" alt=""></a>
+                    <a href="https://www.facebook.com/"><img src="./assets/img/facebook.png" alt=""></a>
+                    <a href="https://www.linkedin.com/"><img src="./assets/img/linkedin.png" alt=""></a>
+                    <a href="https://x.com/"><img src="./assets/img/twitter.png" alt=""></a>
+                    <a href="https://www.youtube.com/"><img src="./assets/img/youtube.png" alt=""></a>
 
                 </div>
                 <hr>
