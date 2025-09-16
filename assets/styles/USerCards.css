@@ -160,7 +160,7 @@
         }
 
         .status-blocked {
-            background: #f4433633;
+            /* background: #f4433633; */
             color: #f44336;
             border: 1px solid #f443364d;
         }
@@ -225,3 +225,6 @@
         .apply-btn:hover {
             background: #0f43d4;
         }
+
+
+        

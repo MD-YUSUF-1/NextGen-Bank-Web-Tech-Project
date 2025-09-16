@@ -51,7 +51,6 @@ function loadCards(value) {
                     '</div>' +
                     '<div class="card-btn-div">' +
                     '<a href="./CardDetails.php?id=' + card.card_id + '" class="btn-know">KNOW MORE</a>' +
-                    '<a href="" class="apply-btn">Apply Now</a>' +
                     '</div>' +
                     '</div>' +
                     '</div>';
